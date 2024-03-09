@@ -9,12 +9,12 @@
 	},
 	"mounts": [
 		"source=/nfs/semeru/projects/pj-incontext-learning-cisco,target=/workspaces/pj-incontext-learning-cisco/data,type=bind,consistency=cached",
-		"source=/scratch/{localEnv:USERPROFILE}/datax,target=/workspaces/pj-incontext-learning-cisco/datax,type=bind,consistency=cached",
+		"source=/scratch/danielrc/datax,target=/workspaces/pj-incontext-learning-cisco/datax,type=bind,consistency=cached",
 		"source=/nfs/semeru/semeru_datasets,target=/workspaces/pj-incontext-learning-cisco/semeru-datasets,type=bind,consistency=cached"
 	],
 	"remoteEnv": {
         "MY_PROJECT_NAME": "pj-incontext-learning-cisco"
     },
-    "runArgs": ["--gpus", "all", "-e", "GRANT_SUDO=yes","--name", "${localWorkspaceFolderBasename}-{localEnv:USERPROFILE}", "--add-host", "host.docker.internal:host-gateway"]	
+    "runArgs": ["--gpus", "all", "-e", "GRANT_SUDO=yes","--name", "${localWorkspaceFolderBasename}-danielrc", "--add-host", "host.docker.internal:host-gateway"]	
 
 }
